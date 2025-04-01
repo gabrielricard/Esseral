@@ -1,8 +1,18 @@
-
-
-<div class="container mt-5">
-    <h1 class="text-center">{{ message }}</h1>
-    <button class="btn btn-primary" (click)="onClick()">Cliquez ici</button>
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s3">
+      <a href="#" class="w3-button w3-block w3-black">HOME</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#about" class="w3-button w3-block w3-black">ABOUT</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#menu" class="w3-button w3-block w3-black">MENU</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#where" class="w3-button w3-block w3-black">WHERE</a>
+    </div>
+  </div>
 </div>
 
 <!-- Header with image -->
@@ -29,11 +39,15 @@
     <p>In addition to our full espresso and brew bar menu, we serve fresh made-to-order breakfast and lunch sandwiches, as well as a selection of sides and salads and other good stuff.</p>
     <div class="w3-panel w3-leftbar w3-light-grey">
       <p><i>"Use products from nature for what it's worth - but never too early, nor too late." Fresh is the new sweet.</i></p>
-      <p>Chef, Coffeeist and Owner: Liam Brown</p>
+      <p>Chef, Coffeeist and Owner: Gabriel Ricard</p>
     </div>
-    <img src="/w3images/coffeeshop.jpg" style="width:100%;max-width:1000px" class="w3-margin-top">
+    <img src="/src/assets/images/wavy_background.jpg" style="width:100%;max-width:1000px" class="w3-margin-top">
     <p><strong>Opening hours:</strong> everyday from 6am to 5pm.</p>
     <p><strong>Address:</strong> 15 Adr street, 5015, NY</p>
+    <div class="container mt-5">
+        <h1 class="text-center">{{ message }}</h1>
+        <button class="btn btn-primary" (click)="onClick()">Cliquez ici</button>
+    </div>
   </div>
 </div>
 
