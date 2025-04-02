@@ -12,7 +12,7 @@ public class HomeController {
 
     @GetMapping("/message")
     public String getMessage() {
-        return "Bienvenue sur mon application Spring Boot + Angular!";
+        return "Vous avez ce je ne sais quoi qui vous rend unique. Que ce soit à travers votre identité, votre vision ou votre façon d’interagir avec le monde, cette singularité est votre plus grande force. Esseral vous aide à révéler l’essence de votre projet, à affirmer vos valeurs et à structurer votre communication pour marquer les esprits." + "Avec un accompagnement clé en main ou à la carte, nous vous aidons à lancer ou à renforcer votre présence en ligne avec clarté et impact. Visez juste, engagez votre audience et bâtissez une communauté qui vous fera grandir..";
     }
 }
 
