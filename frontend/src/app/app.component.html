@@ -6,46 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
     </head>
     <body>    
-        <div class="w3-top">
-            <div class="w3-row w3-padding w3-black">
-            <div class="w3-col s3">
-                <a href="#" class="w3-button w3-block w3-black">ACCUEIL</a>
-            </div>
-            <div class="w3-col s3">
-                <a href="#about" class="w3-button w3-block w3-black">A PROPOS</a>
-            </div>
-            <div class="w3-col s3">
-                <a href="#menu" class="w3-button w3-block w3-black">SERVICES</a>
-            </div>
-            <div class="w3-col s3">
-                <a href="#where" class="w3-button w3-block w3-black">CONTACTEZ NOUS</a>
-            </div>
-            </div>
-        </div>
-
         <router-outlet />
-
-        <footer class="w3-center w3-light-grey w3-padding-48 w3-large">
-            <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
-        </footer>
-        <script>
-            // Tabbed Menu
-            function openMenu(evt, menuName) {
-            var i, x, tablinks;
-            x = document.getElementsByClassName("menu");
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            tablinks = document.getElementsByClassName("tablink");
-            for (i = 0; i < x.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
-            }
-            document.getElementById(menuName).style.display = "block";
-            evt.currentTarget.firstElementChild.className += " w3-dark-grey";
-            }
-            document.getElementById("myLink").click();
-        </script>
     </body>
 </html>
