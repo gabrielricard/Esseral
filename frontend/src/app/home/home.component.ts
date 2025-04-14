@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../services/api.service';
-
+import { MaterialModule } from '../material.module';
 @Component({
   selector: 'app-home',
+  imports: [MaterialModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
