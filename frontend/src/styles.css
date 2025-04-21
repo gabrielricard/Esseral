@@ -13,9 +13,13 @@ body, html {
   height: 100%;
   background: var(--mat-sys-surface);
   color: var(--mat-sys-on-surface);
-  background-color: black;
+  background-image: radial-gradient( circle farthest-corner at -4.1% 49.8%,  rgba(247,127,127,1) 0%, rgba(255,175,90,1) 20.8%, rgba(151,255,114,1) 43.8%, rgba(149,251,255,1) 65.2%, rgba(147,145,255,1) 84.3%, rgba(255,147,248,1) 100.2% );
   color: white;
+  font-family: 'Overused Grotesk Book', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
 }
+
 
 .dm-serif-text-regular {
   font-family: "DM Serif Text", serif;
@@ -29,4 +33,13 @@ body, html {
   font-weight: 400;
   font-style: italic;
   color: white;
+}
+
+@font-face {
+  font-family: 'Overused Grotesk Book';
+  src: url('assets/fonts/OverusedGrotesk-VF.woff') format('woff'),
+       url('assets/fonts/OverusedGrotesk-VF.woff2') format('woff2'),
+       url('assets/fonts/OverusedGrotesk-VF.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }

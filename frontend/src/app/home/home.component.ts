@@ -17,9 +17,9 @@ export class HomeComponent implements OnInit {
   }
   
   ngOnInit(): void {
-    this.apiService.getMessage().subscribe(data => {
+    /*this.apiService.getMessage().subscribe(data => {
       this.message = data;
-    });
+    });*/
   }
-
+  
 }

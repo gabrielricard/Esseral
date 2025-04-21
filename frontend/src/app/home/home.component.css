@@ -6,7 +6,6 @@ header {
     background-size: 100% 100%;    
     animation: gradient 7s ease-in-out infinite;
     will-change: background-position, background-size;
-    border-radius: 0 0 40px 40px;
     overflow: hidden;
   }
   

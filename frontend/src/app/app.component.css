@@ -6,7 +6,7 @@
 }
 
 .header-button:hover {
-    background-color: rgba(255, 255, 255, 0.1); /* Change this to your desired color */
+    background-color: #ffffff1a; /* Change this to your desired color */
     border-radius: 5px; /* Optional: Add some border radius for a smoother look */
     font-size: 1.1rem; /* Optional: Increase font size on hover */
 }
@@ -25,4 +25,5 @@
     z-index: 1000; 
     background-color: rgba(0, 0, 0, 0.4); 
   }
+
 
