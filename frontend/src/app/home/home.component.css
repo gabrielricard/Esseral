@@ -1,27 +1,7 @@
-header {
-    margin: 0;
+header {    
     height: 75vh;
-    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(141,168,235,1) 40%, rgba(145,79,224,1) 60%, rgba(181,24,56,1) 100%);
-    background-position: 50% 50%;
-    background-size: 100% 100%;    
-    animation: gradient 7s ease-in-out infinite;
-    will-change: background-position, background-size;
-    overflow: hidden;
-  }
-  
-  @keyframes gradient {
-    0% {
-      background-position: 50% 50%;
-      background-size: 100% 100%;
-    }
-    50% {
-      background-position: 66% 66%;
-      background-size: 120% 120%;
-    }
-    100% {
-      background-position: 50% 50%;
-      background-size: 100% 100%;
-    }
+    background-image: url("../../assets/images/Assets_Esseral.png");
+    background-size: 100%;    
   }
   
   /* Overlay en transparence par-dessus */
@@ -52,9 +32,9 @@ header {
     top: 50%;
   }
   
-  .hero-content h1 {
+  .hero-content img {
     font-size: 4rem;
-    animation: pulse 5s ease-in-out infinite;
+    animation: pulse 10s ease-in-out infinite;
   }
   
   @keyframes pulse {
@@ -75,9 +55,7 @@ header {
   mat-card {
     margin: 20px;
     padding: 20px;
-    background-color: rgba(29, 22, 22, 0.8); /* Opacité de fond */
-    border-radius: 10px; /* Coins arrondis */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre */
+    border-radius: 10px;
   }
 
   .mat-card-left {
@@ -88,12 +66,11 @@ header {
     margin-left: 30vh;
   }
 
-  .txt-highlight-bold {
-    font-size: 1.5rem;
-    font-weight: bolder;
-    color: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(141,168,235,1) 40%, rgba(145,79,224,1) 60%, rgba(181,24,56,1) 100%);;
-  }
 
   #home-content {
     min-width: 70%;
+  }
+
+  .logo {
+    width: 40rem;
   }

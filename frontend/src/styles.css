@@ -13,33 +13,58 @@ body, html {
   height: 100%;
   background: var(--mat-sys-surface);
   color: var(--mat-sys-on-surface);
-  background-image: radial-gradient( circle farthest-corner at -4.1% 49.8%,  rgba(247,127,127,1) 0%, rgba(255,175,90,1) 20.8%, rgba(151,255,114,1) 43.8%, rgba(149,251,255,1) 65.2%, rgba(147,145,255,1) 84.3%, rgba(255,147,248,1) 100.2% );
-  color: white;
+  background: #FFECE5;
+  color: #1e1e1e;
   font-family: 'Overused Grotesk Book', sans-serif;
   font-size: 1.2rem;
   font-weight: 500;
 }
 
-
-.dm-serif-text-regular {
-  font-family: "DM Serif Text", serif;
-  font-weight: 400;
-  font-style: normal;
-  color: white;
+body, span {
+  font-family: 'Overused Grotesk', sans-serif;
 }
 
-.dm-serif-text-regular-italic {
-  font-family: "DM Serif Text", serif;
-  font-weight: 400;
+h1, h2, h3, mat-card-header {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+p {
+  font-family: 'Overused Grotesk', sans-serif;
   font-style: italic;
-  color: white;
+}
+
+/* 
+ * Importing fonts
+ */
+
+ /* Importing Overused Grotesk fonts */
+@font-face {
+  font-family: 'Overused Grotesk';
+  src: url('assets/fonts/OverusedGrotesk-Book.ttf') format('truetype');
+  font-weight: 400; /* Normal weight */
+  font-style: normal;
 }
 
 @font-face {
-  font-family: 'Overused Grotesk Book';
-  src: url('assets/fonts/OverusedGrotesk-VF.woff') format('woff'),
-       url('assets/fonts/OverusedGrotesk-VF.woff2') format('woff2'),
-       url('assets/fonts/OverusedGrotesk-VF.ttf') format('truetype');
-  font-weight: normal;
+  font-family: 'Overused Grotesk';
+  src: url('assets/fonts/OverusedGrotesk-Bold.ttf') format('truetype');
+  font-weight: 700; /* Bold weight */
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'Overused Grotesk';
+  src: url('assets/fonts/OverusedGrotesk-Italic.ttf') format('truetype');
+  font-weight: 400; /* Normal weight */
+  font-style: italic;
+}
+
+/* Importing Montserrat font */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('assets/fonts/Montserrat-SemiBold.ttf') format('truetype');
+  font-weight: 600; /* SemiBold weight */
+  font-style: normal;
+}
+
