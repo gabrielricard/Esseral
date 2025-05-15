@@ -5,32 +5,17 @@ body, html {
 
   .bgimg {
     background-position: center;
-    background-size: cover;
-    background-image: url("../src/assets/images/wavy_background.jpg");
+    background-size: cover;    
     min-height: 100%;    
-  }
-
-  .dm-serif-text-regular {
-    font-family: "DM Serif Text", serif;
-    font-weight: 400;
-    font-style: normal;
-    color: white;
-  }
-  
-  .dm-serif-text-regular-italic {
-    font-family: "DM Serif Text", serif;
-    font-weight: 400;
-    font-style: italic;
-    color: white;
   }
 
   header {
     margin: 0;
     height: 100vh;
-    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(141,168,235,1) 40%, rgba(145,79,224,1) 60%, rgba(181,24,56,1) 100%);
+    background: radial-gradient(circle, #CC6637 0%, #cc3634 20%, #B818C9  55%, #5149C9 75%, #5149C9 100%);
     background-position: 50% 50%;
     background-size: 100% 100%;    
-    animation: gradient 10s ease-in-out infinite;
+    animation: gradient 14s ease-in-out infinite;
     will-change: background-position, background-size;
   }
   
@@ -78,9 +63,14 @@ header::after {
   transform: translateY(-50%);
 }
 
-.hero-content h1 {
-  font-size: 4rem;
-  animation: pulse 5s ease-in-out infinite;
+.hero-content img, .sous-logo {
+  max-width: 40rem;
+  margin-bottom: 2rem;
+  animation: pulse 7s ease-in-out infinite;
+}
+
+.sous-logo {
+  animation: pulse 11s ease-in-out infinite;
 }
 
 @keyframes pulse {
@@ -96,4 +86,48 @@ header::after {
     transform: scale(1);
     opacity: 1;
   }
+}
+
+body, span {
+  font-family: 'Overused Grotesk', sans-serif;
+}
+
+h1, h2, h3, mat-card-header {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+p {
+  font-family: 'Overused Grotesk', sans-serif;
+  font-style: italic;
+}
+
+ /* Importing Overused Grotesk fonts */
+@font-face {
+  font-family: 'Overused Grotesk';
+  src: url('assets/fonts/OverusedGrotesk-Book.ttf') format('truetype');
+  font-weight: 400; /* Normal weight */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Overused Grotesk';
+  src: url('assets/fonts/OverusedGrotesk-Bold.ttf') format('truetype');
+  font-weight: 700; /* Bold weight */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Overused Grotesk';
+  src: url('assets/fonts/OverusedGrotesk-Italic.ttf') format('truetype');
+  font-weight: 400; /* Normal weight */
+  font-style: italic;
+}
+
+/* Importing Montserrat font */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('assets/fonts/Montserrat-SemiBold.ttf') format('truetype');
+  font-weight: 600; /* SemiBold weight */
+  font-style: normal;
 }
