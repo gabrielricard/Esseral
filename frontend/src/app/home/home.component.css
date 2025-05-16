@@ -1,0 +1,12 @@
+/* Make header fill the viewport */
+
+/* Extra tweaks for very small screens */
+@media (max-width: 600px) {
+  .logo {
+    max-width: 90vw;
+    max-height: 20vh;
+  }
+  .sous-logo {
+    font-size: 7vw;
+  }
+}
