@@ -24,6 +24,7 @@
     height: 135px;
     transition: box-shadow 0.6s, transform 0.4s;
     text-decoration: none;
+    z-index: 10;
 }
 
 .social-btn:hover {
@@ -36,6 +37,7 @@
     height: 86px;
     object-fit: contain;
     display: block;
+    z-index: 10;
 }
 
 .logo-link {
@@ -54,10 +56,11 @@
     height: 320px;
     width: auto;
     display: block;
+    z-index: 10;
 }
 
 .slogan {
-    max-width: 320px;
+    max-width: 300px;
     text-align: center;
     font-size: 1.2rem;
     color: #444;
@@ -80,13 +83,50 @@
     }
     .slogan {
         font-size: 1rem;
+        z-index: 10;
+    }
+
+    .slogan hr {                
+        height: 4px;
+        max-width: 95vw;
+        clip-path: polygon(6px 0, 100% 0, calc(100% - 6px) 100%, 0 100%);           
+    }
+
+    .splash-img {
+        left: -75vw;
+        bottom: -75vw;
+        width: 200vw;
+    }
+    .splash-img2 {
+        right: -55vw;
+        top: -65vw;
+        width: 140vw;
+    }
+}
+
+@media (min-width: 321px) {
+    .slogan hr {
+        margin: 20px -20px;
+    }
+}
+
+@media (min-width: 601px) {
+
+    .splash-img {
+        left: -30vw;         /* Responsive negative offset */
+        bottom: -30vw;  /* Negative value to peek out */
+        width: 82vw;    /* Responsive size */
+    }
+
+    .splash-img2 {
+        right: -30vw;    /* Negative value to peek out */
+        top: -30vw;  /* Negative value to peek out */
+        width: 67vw;    /* Responsive size */
     }
 }
 
 .slogan hr {
-    width: calc(100% + 40px);
-    max-width: 380px;
-    margin: 20px -20px;
+    width: calc(100% + 40px);    
     border: none;
     height: 6px;
     background: linear-gradient(90deg, #5149C9 0%, #B818C9 25%, #cc3634 50%, #CC6637  75%, #B818C9 100%);
@@ -97,9 +137,6 @@
 
 .splash-img {
     position: fixed;
-    left: -600px;    /* Negative value to peek out */
-    bottom: -600px;  /* Negative value to peek out */
-    width: 82vw;    /* Responsive size */
     z-index: 0;
     pointer-events: none;
     user-select: none;
@@ -108,9 +145,6 @@
 
 .splash-img2 {
     position: fixed;
-    right: -600px;    /* Negative value to peek out */
-    top: -600px;  /* Negative value to peek out */
-    width: 67vw;    /* Responsive size */
     z-index: 0;
     pointer-events: none;
     user-select: none;
