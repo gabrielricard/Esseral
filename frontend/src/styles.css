@@ -57,6 +57,7 @@ header::after {
 
 .hero-content {
   position: relative;
+  color: #FFECE5;
   z-index: 3;  
   text-align: center;
   top: 50%;
