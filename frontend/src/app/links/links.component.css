@@ -90,11 +90,44 @@
     border: none;
     height: 6px;
     background: linear-gradient(90deg, #5149C9 0%, #B818C9 25%, #cc3634 50%, #CC6637  75%, #B818C9 100%);
+    opacity: 0.85;
     display: block;
     clip-path: polygon(8px 0, 100% 0, calc(100% - 8px) 100%, 0 100%);
 }
 
-html {
-    scroll-behavior: smooth;
-    background-image: url('assets/images/Assets_Esseral.png');
+.splash-img {
+    position: fixed;
+    left: -600px;    /* Negative value to peek out */
+    bottom: -600px;  /* Negative value to peek out */
+    width: 82vw;    /* Responsive size */
+    z-index: 0;
+    pointer-events: none;
+    user-select: none;
+    animation: pulse 9s infinite;
+}
+
+.splash-img2 {
+    position: fixed;
+    right: -600px;    /* Negative value to peek out */
+    top: -600px;  /* Negative value to peek out */
+    width: 67vw;    /* Responsive size */
+    z-index: 0;
+    pointer-events: none;
+    user-select: none;
+    animation: pulse 10s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.06);
+        opacity: 0.92;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
