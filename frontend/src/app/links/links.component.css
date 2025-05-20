@@ -108,6 +108,18 @@
     .slogan hr {
         margin: 20px -20px;
     }
+    
+    .splash-img {
+        left: -30vw;         /* Responsive negative offset */
+        bottom: -30vw;  /* Negative value to peek out */
+        width: 82vw;    /* Responsive size */
+    }
+
+    .splash-img2 {
+        right: -30vw;    /* Negative value to peek out */
+        top: -30vw;  /* Negative value to peek out */
+        width: 67vw;    /* Responsive size */
+    }
 }
 
 @media (min-width: 601px) {

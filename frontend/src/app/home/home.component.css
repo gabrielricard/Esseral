@@ -3,10 +3,16 @@
 /* Extra tweaks for very small screens */
 @media (max-width: 600px) {
   .logo {
-    max-width: 90vw;
+    max-width: 82vw;
     max-height: 20vh;
   }
   .sous-logo {
-    font-size: 7vw;
+    font-size: 5vw;
+  }
+}
+
+@media (min-width: 600px) {
+  .sous-logo {
+    font-size: 2rem;
   }
 }
