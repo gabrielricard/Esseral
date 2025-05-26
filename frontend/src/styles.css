@@ -1,5 +1,12 @@
 @use '@angular/material' as mat;
 
+
+@media (max-width: 600px) {
+}
+
+@media (min-width: 600px) {
+}
+
 body, html {
   color-scheme: light dark;
   @include mat.theme((
