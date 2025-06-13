@@ -1,7 +1,8 @@
-header {    
-    height: 75vh;
-    background-image: url("../../assets/images/Assets_Esseral.png");
+  header {    
+    height: 75vh;    
     background-size: 100%;    
+    background: #544AAF;
+    background: linear-gradient(147deg,rgba(84, 74, 175, 1) 0%, rgba(204, 54, 52, 1) 33%, rgba(204, 102, 55, 1) 66%, rgba(170, 61, 167, 1) 100%);
   }
   
   /* Overlay en transparence par-dessus */
@@ -73,4 +74,33 @@ header {
 
   .logo {
     width: 40rem;
+  }
+
+  .marquee {
+    width: 100vw;
+    overflow: hidden;
+    background: transparent;
+    white-space: nowrap;
+    box-sizing: border-box;
+    color: #FFECE5;
+    border-top: #FFECE5 solid 3px;
+    border-bottom: #FFECE5 solid 3px;  
+    font-size: 1.5rem;
+    background: #544AAF;
+    background: linear-gradient(323deg,rgba(84, 74, 175, 0.8) 0%, rgba(204, 54, 52, 0.8) 33%, rgba(204, 102, 55, 0.8) 66%, rgba(170, 61, 167, 0.8) 100%);
+  }
+
+  .marquee__inner {
+    display: flex;
+    width: max-content;
+    animation: marquee 48s linear infinite;  
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
   }

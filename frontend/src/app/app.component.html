@@ -29,18 +29,15 @@
             </section>
         </div>
 
-        <router-outlet />
+        <router-outlet/>
+        <div class="background-footer">
+            <footer class="footer-content">            
+                <p>© 2023 Esseral. Tous droits réservés.</p>
+                <p>Conception et développement par 
+                    <a href="https://www.linkedin.com/in/Gabru" target="_blank" style="color: white;">Gabriel Ricard</a>
+                </p>
+                <p>Politique de confidentialité | Conditions d'utilisation</p>
+            </footer>
+        </div>
     </body>
-    <p *ngIf="showFooter">Le footer DEVRAIT apparaître maintenant 👇</p>
-    <section *ngIf="showFooter">
-        <footer style="background: black; color: white; text-align: center; padding: 20px;">
-          <p>Footer Esseral</p>
-        </footer>
-      </section>
-    <section *ngIf="showFooter">
-        <mat-divider></mat-divider>
-        <footer class="w3-center w3-black w3-padding-48 w3-large">
-          <p><a mat-button href="" style="color: white;">ESSERAL</a></p>
-        </footer>
-    </section>
 </html>
