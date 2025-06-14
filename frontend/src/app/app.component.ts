@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { AfterViewInit, Component, HostListener } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { MaterialModule } from './material.module';
 import { CommonModule } from '@angular/common';
@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit{
   title = 'frontend';
 
   showFooter = false;
@@ -26,5 +26,24 @@ export class AppComponent {
     console.log(`At bottom: ${atBottom}`);
   
     this.showFooter = atBottom;
+  }
+
+  ngAfterViewInit() {
+    const burger = document.querySelector('.toolbar-burger') as HTMLElement;
+    const drawer = document.querySelector('.toolbar-drawer') as HTMLElement;
+
+    if (burger && drawer) {
+      burger.addEventListener('click', () => {
+        burger.classList.toggle('open');
+        drawer.classList.toggle('open');
+      });
+      // Optional: close drawer when clicking a link
+      drawer.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          burger.classList.remove('open');
+          drawer.classList.remove('open');
+        });
+      });
+    }
   }
 }

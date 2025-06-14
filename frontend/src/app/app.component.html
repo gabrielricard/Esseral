@@ -13,30 +13,87 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
     <body>    
-        <div class="w3-black button-row">
-            <section class="fixed-toolbar">
-                <mat-toolbar class="header-toolbar" color="primary" style="width: 100%;">
-                    <div class="mat-toolbar-row" style="justify-content: space-evenly;">
-                        <span class="mat-toolbar-spacer"></span>
-                            <a mat-button href="/" class="header-button" style="color: white;">ACCUEIL</a>
-                            <a mat-button href="/products" class="header-button" style="color: white;">SERVICES</a>                            
-                            <a mat-button href="/" class="header-button" style="color: white;"><img src="assets/images/Logo Mark/Logo_Esseral_logo-mark_beige.png" alt="Logo Esseral" class="logo-small"></a>
-                            <a mat-button href="/about" class="header-button" style="color: white;">A PROPOS</a>
-                            <a mat-button href="/contact" class="header-button" style="color: white;">CONTACTEZ NOUS</a>
-                        <span class="mat-toolbar-spacer"></span>
-                    </div>
-                </mat-toolbar>
-            </section>
+        <div class="custom-toolbar">
+            <a href="/" class="toolbar-logo" aria-label="Accueil">
+                <img class="logo-icon" src="assets/images/Logo Mark/Logo_Esseral_logo-mark_beige.png" alt="Logo Esseral">
+                <img class="logo-text" src="assets/images/Logo primaire/Logo_Esseral_primaire-beige.png" alt="Logo Esseral Primaire">
+            </a>
+            <nav class="toolbar-links">
+                <a href="/" class="toolbar-link">ACCUEIL</a>
+                <a href="/products" class="toolbar-link">SERVICES</a>
+                <a href="/about" class="toolbar-link">A PROPOS</a>
+                <a href="/contact" class="toolbar-link">NOUS CONTACTER</a>
+            </nav>
+            <button class="toolbar-burger" aria-label="Ouvrir le menu">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="toolbar-drawer">
+                <a href="/" class="drawer-link">ACCUEIL</a>
+                <a href="/products" class="drawer-link">SERVICES</a>
+                <a href="/about" class="drawer-link">A PROPOS</a>
+                <a href="/contact" class="drawer-link">NOUS CONTACTER</a>
+            </div>
         </div>
 
         <router-outlet/>
         <div class="background-footer">
-            <footer class="footer-content">            
-                <p>© 2023 Esseral. Tous droits réservés.</p>
-                <p>Conception et développement par 
-                    <a href="https://www.linkedin.com/in/Gabru" target="_blank" style="color: white;">Gabriel Ricard</a>
-                </p>
-                <p>Politique de confidentialité | Conditions d'utilisation</p>
+            <footer class="footer-content">
+                <div class="footer-social">
+                    <p class="footer-follow">Pour nous suivre :</p>
+                    <div class="footer-social-row">
+                        <a href="https://www.instagram.com/esseral.ca" target="_blank" aria-label="Instagram" class="footer-social-btn instagram-btn">
+                            <img src="assets/images/buttons/icons8-instagram-windows-11-color/icons8-instagram-240.png" alt="Instagram" />
+                        </a>
+                        <span class="footer-social-label footer-instagram-label">instagram/essera.cal</span>
+                    </div>
+                    <div class="footer-social-row">
+                        <a href="https://www.linkedin.com/company/esseral/posts/" target="_blank" aria-label="LinkedIn" class="footer-social-btn linkedin-btn">
+                            <img src="assets/images/buttons/icons8-linkedin-color/icons8-linkedin-240.png" alt="LinkedIn" />
+                        </a>
+                        <span class="footer-social-label footer-linkedin-label">linkedin/esseral</span>
+                    </div>
+                </div>
+                <div class="footer-infos">
+                    <p>© 2025 Esseral. Tous droits réservés.</p>
+                    <p>Conception et développement par 
+                        <a href="https://www.linkedin.com/in/Gabriel Ricard" target="_blank" style="color: white;">Gabriel Ricard</a>
+                    </p>
+                    <p>Politique de confidentialité | Conditions d'utilisation</p>
+                </div>
+                <div class="footer-contact">
+                    <p class="footer-follow">Pour nous contacter :</p>
+                    <div class="footer-contact-row">
+                        <a href="tel:+15148231042" aria-label="Téléphone" class="footer-contact-btn phone-btn">
+                            <img src="assets/images/buttons/phone_icon.png" alt="Téléphone" />
+                        </a>
+                        <span class="footer-contact-label">(514) 823-1042</span>
+                    </div>
+                    <div class="footer-contact-row">
+                        <a href="mailto:info@esseral.ca" aria-label="Email" class="footer-contact-btn email-btn">
+                            <img src="assets/images/buttons/email_icon.png" alt="Email" />
+                        </a>
+                        <span class="footer-contact-label">contact&#64;esseral.ca</span>
+                    </div>
+                </div>
+                <!-- Boutons mobile -->
+                <div class="footer-mobile-row">
+                    <div class="footer-mobile-group">
+                        <a href="https://www.instagram.com/esseral.ca" target="_blank" aria-label="Instagram" class="footer-social-btn instagram-btn">
+                            <img src="assets/images/buttons/icons8-instagram-windows-11-color/icons8-instagram-240.png" alt="Instagram" />
+                        </a>
+                        <a href="https://www.linkedin.com/company/esseral/posts/" target="_blank" aria-label="LinkedIn" class="footer-social-btn linkedin-btn">
+                            <img src="assets/images/buttons/icons8-linkedin-color/icons8-linkedin-240.png" alt="LinkedIn" />
+                        </a>
+                    </div>
+                    <div class="footer-mobile-group">
+                        <a href="tel:+15148231042" aria-label="Téléphone" class="footer-contact-btn phone-btn">
+                            <img src="assets/images/buttons/phone_icon.png" alt="Téléphone" />
+                        </a>
+                        <a href="mailto:info@esseral.ca" aria-label="Email" class="footer-contact-btn email-btn">
+                            <img src="assets/images/buttons/email_icon.png" alt="Email" />
+                        </a>
+                    </div>
+                </div>
             </footer>
         </div>
     </body>

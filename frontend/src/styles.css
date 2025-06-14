@@ -36,9 +36,8 @@ h1, h2, h3, mat-card-header {
   font-weight: 600;
 }
 
-p {
+p, span, a, li {
   font-family: 'Overused Grotesk', sans-serif;
-  font-style: italic;
 }
 
 /* 
