@@ -378,6 +378,11 @@ mat-divider {
     height: 2.4em;
   }
 
+  .footer-contact-btn-phone img {
+    width: 2.8em;
+    height: 2.8em;
+  }
+
   .footer-social,
   .footer-contact {
     display: none;
@@ -400,7 +405,7 @@ mat-divider {
   }
 }
 
-header, .custom-toolbar, footer, .footer-content {
+footer, .footer-content {
   position: relative;
   z-index: 10;
 }
