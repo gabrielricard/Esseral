@@ -373,15 +373,6 @@ mat-divider {
   .footer-contact-label {
     display: none;
   }
-  .footer-contact-btn img {
-    width: 2.4em;
-    height: 2.4em;
-  }
-
-  .footer-contact-btn-phone img {
-    width: 2.8em;
-    height: 2.8em;
-  }
 
   .footer-social,
   .footer-contact {
