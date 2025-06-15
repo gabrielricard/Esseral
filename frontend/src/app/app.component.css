@@ -285,9 +285,7 @@ mat-divider {
 
 .footer-contact-btn img {
   width: 2.2em;
-  height: 2.2em;
-  border-radius: 8px;
-  border: 2px solid #FFECE5;  
+  height: 2.2em; 
   transition: transform 0.18s, box-shadow 0.18s;  
 }
 
@@ -400,4 +398,9 @@ mat-divider {
     align-items: center;
     width: 50%;
   }
+}
+
+header, .custom-toolbar, footer, .footer-content {
+  position: relative;
+  z-index: 10;
 }

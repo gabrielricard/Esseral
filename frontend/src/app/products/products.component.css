@@ -14,9 +14,19 @@
   text-align: center;
   font-size: 2rem;
   font-weight: bold;
-  color: #1F1F1F;
-  margin-bottom: 2.5rem;
+  color: #B818C9;  
   letter-spacing: 1px;
+}
+
+.intro-hr {
+  width: 60%;
+  margin: 1.2em auto;
+  border: none;
+  height: 4px;
+  background: linear-gradient(90deg, #5149C9 0%, #B818C9 40%, #cc3634 70%, #CC6637 100%);
+  border-radius: 2px;
+  margin-bottom: 2.5rem;
+  opacity: 0.7;
 }
 
 .services-accordion {
@@ -34,10 +44,17 @@ mat-expansion-panel {
   border: none;
   overflow: hidden;
   transition: box-shadow 0.2s;
+  background: linear-gradient(90deg, #CC6637 0%, #B818C9 100%);
 }
 
 mat-expansion-panel:not([aria-expanded="true"]):hover {
   box-shadow: 0 4px 24px #b818c933;
+  background: linear-gradient(90deg, #CC6637 0%, #B818C9 100%);  
+}
+
+mat-expansion-panel-header:not([aria-expanded="true"]):hover {
+  box-shadow: 0 4px 24px #b818c933;
+  background: linear-gradient(90deg, #CC6637 0%, #B818C9 100%);  
 }
 
 mat-expansion-panel-header {
@@ -56,6 +73,16 @@ mat-expansion-panel-header {
 mat-expansion-panel-header.mat-expanded {
   background: linear-gradient(90deg, #CC6637 0%, #B818C9 100%);
   color: #fff;
+}
+
+mat-expansion-panel .service-desc {
+  background: #fff;
+  border-radius: 0 0 18px 18px;
+  box-shadow: 0 2px 16px #b818c91a;
+}
+
+mat-expansion-panel .service-desc {
+  transition: background 0.2s;
 }
 
 .service-desc {
@@ -83,4 +110,61 @@ mat-expansion-panel-header.mat-expanded {
     padding: 1em 1em 1.5em 1em;
   }
 }
+
+.splash-img,
+.splash-img2 {
+  position: fixed;
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
+  opacity: 0.7;
+  width: 38vw;
+  min-width: 1360px;;
+  height: auto;
+  transition: opacity 0.3s;
+}
+
+.splash-img {
+  left: 0;
+  bottom: 0;
+  top: auto;
+  right: auto;
+  transform: translate(-30%, 30%) scaleX(-1) rotate(-8deg);
+}
+
+.splash-img2 {
+  right: 0;
+  top: 0;
+  left: auto;
+  bottom: auto;
+  transform: translate(34%, -34%) rotate(8deg);
+}
+
+/* Pour que le contenu soit au-dessus des splash */
+main, .mat-card, .about-content, .about-section {
+  position: relative;
+  z-index: 1;
+}
+
+/* Pour éviter que les splash couvrent le header/footer */
+header, .custom-toolbar, footer, .footer-content {
+  position: relative;
+  z-index: 10;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .splash-img,
+  .splash-img2 {
+    width: 129vw;
+    min-width: 20px;    
+    opacity: 0.7;
+  }
+}
+
+
+
+
+
+
 

@@ -23,3 +23,54 @@ mat-card {
   #home-content {
     min-width: 70%;
   }
+
+  .splash-img,
+.splash-img2 {
+  position: fixed;
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
+  opacity: 0.7;
+  width: 38vw;
+  min-width: 1360px;;
+  height: auto;
+  transition: opacity 0.3s;
+}
+
+.splash-img {
+  left: 0;
+  bottom: 0;
+  top: auto;
+  right: auto;
+  transform: translate(-30%, 30%) scaleX(-1) rotate(-8deg);
+}
+
+.splash-img2 {
+  right: 0;
+  top: 0;
+  left: auto;
+  bottom: auto;
+  transform: translate(34%, -34%) rotate(8deg);
+}
+
+/* Pour que le contenu soit au-dessus des splash */
+section, main, .mat-card, .about-content, .about-section {
+  position: relative;
+  z-index: 1;
+}
+
+/* Pour éviter que les splash couvrent le header/footer */
+header, .custom-toolbar, footer, .footer-content {
+  position: relative;
+  z-index: 10;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .splash-img,
+  .splash-img2 {
+    width: 129vw;
+    min-width: 20px;    
+    opacity: 0.7;
+  }
+}

@@ -96,15 +96,6 @@ header {
     pointer-events: none;
   }
   
-  /*
-  .hero-content {
-    position: relative;
-    z-index: 3;
-    color: white;
-    text-align: center;
-    top: 50%;
-  }
-  */
   .hero-content img {
     font-size: 4rem;
     animation: pulse 10s ease-in-out infinite;
@@ -160,6 +151,7 @@ header {
     font-size: 1.5rem;
     background: #544AAF;
     background: linear-gradient(323deg,rgba(84, 74, 175, 0.9) 0%, rgba(204, 54, 52, 0.9) 33%, rgba(204, 102, 55, 0.8) 66%, rgba(170, 61, 167, 0.9) 100%);
+    z-index: 10;
   }
 
   .marquee__inner {
@@ -168,6 +160,7 @@ header {
   width: max-content;
   animation: marquee 48s linear infinite;
   gap: 4.5rem; /* espace entre chaque élément */
+  z-index: 10;
 }
 
 .marquee-item {
@@ -178,6 +171,7 @@ header {
   font-weight: 600;
   color: #FFECE5;
   white-space: nowrap;
+  z-index: 10;
 }
 
 .marquee-sep {
@@ -186,6 +180,7 @@ header {
   margin: 0 4.8rem;
   font-weight: bold;
   user-select: none;
+  z-index: 10;
 }
 
   @keyframes marquee {
@@ -194,7 +189,7 @@ header {
     }
     100% {
       transform: translateX(-50%);
-    }
+    }    
   }
 
   .intro-section {
@@ -336,5 +331,57 @@ header {
   .home-resume-block {
     max-width: 95vw;
     min-width: unset;
+  }
+}
+
+.splash-img,
+.splash-img2 {
+  position: fixed;
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
+  opacity: 0.7;
+  width: 38vw;
+  min-width: 1360px;;
+  height: auto;
+  transition: opacity 0.3s;
+}
+
+.splash-img {
+  left: 0;
+  bottom: 0;
+  top: auto;
+  right: auto;
+  transform: translate(-30%, 30%) scaleX(-1) rotate(-8deg);
+}
+
+.splash-img2 {
+  right: 0;
+  top: 0;
+  left: auto;
+  bottom: auto;
+  transform: translate(34%, -34%) rotate(8deg);
+}
+
+/* Pour que le contenu soit au-dessus des splash */
+section, main, .mat-card, .about-content, .about-section {
+  position: relative;
+  z-index: 1;
+}
+
+/* Pour éviter que les splash couvrent le header/footer */
+header, .custom-toolbar, footer, .footer-content {
+  position: relative;
+  z-index: 10;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .splash-img,
+  .splash-img2 {
+    width: 129vw;
+    min-width: 20px;    
+    opacity: 0.7;
+    z-index: 0;
   }
 }
