@@ -1,30 +1,4 @@
-mat-card {
-    margin: 20px;
-    padding: 20px;
-    background-color: rgba(29, 22, 22, 0.8); /* Opacité de fond */
-    border-radius: 10px; /* Coins arrondis */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre */
-  }
-
-  .mat-card-left {
-    margin-right: 30vh;
-  }
-
-  .mat-card-right{
-    margin-left: 30vh;
-  }
-
-  .txt-highlight-bold {
-    font-size: 1.5rem;
-    font-weight: bolder;
-    color: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(141,168,235,1) 40%, rgba(145,79,224,1) 60%, rgba(181,24,56,1) 100%);;
-  }
-
-  #home-content {
-    min-width: 70%;
-  }
-
-  .splash-img,
+.splash-img,
 .splash-img2 {
   position: fixed;
   z-index: 0;
@@ -73,4 +47,166 @@ header, .custom-toolbar, footer, .footer-content {
     min-width: 20px;    
     opacity: 0.7;
   }
+}
+
+.contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 81.4vh;
+  width: 100vw;
+  padding: 2em 0;
+  padding-top: 7rem;
+}
+
+.contact-block {
+  background: rgba(255,236,229,0.92);
+  border-radius: 24px;
+  box-shadow: 0 4px 32px #b818c91a;
+  padding: 2.5em 2em 2.5em 2em;
+  max-width: 480px;
+  width: 95vw;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;  
+}
+
+.contact-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #B818C9;
+  margin-bottom: 0.5em;
+  letter-spacing: 1px;
+}
+
+.contact-hr {
+  width: 60%;
+  margin: 1.2em auto;
+  border: none;
+  height: 4px;
+  background: linear-gradient(90deg, #5149C9 0%, #B818C9 40%, #cc3634 70%, #CC6637 100%);
+  border-radius: 2px;
+  opacity: 0.7;
+}
+
+.contact-desc {
+  font-family: 'Overused Grotesk', sans-serif;
+  font-size: 1.1rem;
+  color: #5149C9;
+  margin-bottom: 2em;
+}
+
+.contact-infos {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1em;
+  align-items: center;
+  margin-bottom: 2em;
+  width: 100%;
+}
+
+.contact-info-link {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.08em;
+  color: #B818C9;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.18s;
+}
+
+.contact-info-link:hover,
+.contact-info-link:focus {
+  color: #CC6637;
+}
+
+.contact-info-icon {
+  width: 2.2em;
+  height: 2.2em;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 2px 8px #b818c933;
+  transition: transform 0.18s, box-shadow 0.18s;
+}
+
+.contact-info-link:hover .contact-info-icon,
+.contact-info-link:focus .contact-info-icon {
+  transform: scale(1.13);
+  box-shadow: 0 4px 18px #B818C955;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1em;
+  width: 100%;
+  margin-top: 1em;
+}
+
+.contact-form input,
+.contact-form textarea {
+  font-family: 'Overused Grotesk', sans-serif;
+  font-size: 1em;
+  padding: 0.9em 1em;
+  border-radius: 12px;
+  border: 1.5px solid #B818C9;
+  background: #fff;
+  color: #1E1E1E;
+  outline: none;
+  transition: border 0.18s;
+  resize: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border: 1.5px solid #CC6637;
+}
+
+.contact-form button.cta-btn {
+  margin-top: 0.5em;
+  font-size: 1.08rem;
+  padding: 0.7em 1.7em;
+  align-self: center;
+}
+
+@media (max-width: 700px) {
+  .contact-block {
+    padding: 1.2em 0.5em 1.5em 0.5em;
+    max-width: 99vw;
+  }
+
+  .contact-info-icon {
+    width: 2.7em;
+    height: 2.7em;
+  }
+}
+
+.cta-btn {
+  display: inline-block;
+  margin-top: 1.5em;
+  padding: 0.9em 2.2em;
+  font-size: 1.15rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(90deg, #B818C9 0%, #CC6637 100%);
+  border: none;
+  border-radius: 32px;
+  box-shadow: 0 2px 16px #b818c93a;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: background 0.18s, transform 0.18s, box-shadow 0.18s;
+}
+
+.cta-btn:hover,
+.cta-btn:focus {
+  background: linear-gradient(90deg, #CC6637 0%, #B818C9 100%);
+  transform: scale(1.06) translateY(-2px);
+  box-shadow: 0 6px 24px #b818c955;
+  color: #fff;
 }
