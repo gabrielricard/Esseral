@@ -1,52 +1,43 @@
-<!DOCTYPE html>
-<html>
-    <head>
-    <title>Esseral</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">    
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    </head>
-    <body>    
+   
         <div class="custom-toolbar">
-            <a href="/" class="toolbar-logo" aria-label="Accueil">
-                <img class="logo-icon" src="assets/images/Logo Mark/Logo_Esseral_logo-mark_beige.png" alt="Logo Esseral">
-                <img class="logo-text" src="assets/images/Logo primaire/Logo_Esseral_primaire-beige.png" alt="Logo Esseral Primaire">
+            <a routerLink="/" class="toolbar-logo" aria-label="Accueil" (click)="removeFocus($event)">
+                <div>
+                    <img class="logo-icon" src="assets/images/Logo Mark/Logo_Esseral_logo-mark_beige.png" alt="Logo Esseral">
+                    <img class="logo-text" src="assets/images/Logo primaire/Logo_Esseral_primaire-beige.png" alt="Logo Esseral Primaire">
+                </div>
             </a>
             <nav class="toolbar-links">
-                <a href="/" class="toolbar-link">ACCUEIL</a>
-                <a href="/products" class="toolbar-link">SERVICES</a>
-                <a href="/about" class="toolbar-link">A PROPOS</a>
-                <a href="/contact" class="toolbar-link">NOUS CONTACTER</a>
+                <a routerLink="/" class="toolbar-link" (click)="removeFocus($event)" matRipple>ACCUEIL</a>
+                <a routerLink="/products" class="toolbar-link" (click)="removeFocus($event)" matRipple>SERVICES</a>
+                <a routerLink="/about" class="toolbar-link" (click)="removeFocus($event)" matRipple>À PROPOS</a>
+                <a routerLink="/contact" class="toolbar-link" (click)="removeFocus($event)" matRipple>NOUS CONTACTER</a>
             </nav>
             <button class="toolbar-burger" aria-label="Ouvrir le menu">
                 <span></span><span></span><span></span>
             </button>
             <div class="toolbar-drawer">
-                <a href="/" class="drawer-link">ACCUEIL</a>
-                <a href="/products" class="drawer-link">SERVICES</a>
-                <a href="/about" class="drawer-link">A PROPOS</a>
-                <a href="/contact" class="drawer-link">NOUS CONTACTER</a>
+                <a routerLink="/" class="drawer-link" (click)="removeFocus($event)" matRipple>ACCUEIL</a>
+                <a routerLink="/products" class="drawer-link" (click)="removeFocus($event)" matRipple>SERVICES</a>
+                <a routerLink="/about" class="drawer-link" (click)="removeFocus($event)" matRipple>À PROPOS</a>
+                <a routerLink="/contact" class="drawer-link" (click)="removeFocus($event)" matRipple>NOUS CONTACTER</a>
             </div>
         </div>
-        <router-outlet/>
+
+        <main [@routeFadeAnimation]="o.isActivated && o.activatedRoute.routeConfig?.path">
+            <router-outlet #o="outlet"></router-outlet>
+        </main>
         <div class="background-footer">
             <footer class="footer-content">
                 <div class="footer-social">
                     <p class="footer-follow">Pour nous suivre :</p>
                     <div class="footer-social-row">
-                        <a href="https://www.instagram.com/esseral.ca" target="_blank" aria-label="Instagram" class="footer-social-btn instagram-btn">
+                        <a href="https://www.instagram.com/esseral.ca" target="_blank" aria-label="Instagram" class="footer-social-btn instagram-btn" matRipple>
                             <img src="assets/images/buttons/icons8-instagram-windows-11-color/icons8-instagram-240.png" alt="Instagram" />
                         </a>
                         <span class="footer-social-label footer-instagram-label">instagram/essera.cal</span>
                     </div>
                     <div class="footer-social-row">
-                        <a href="https://www.linkedin.com/company/esseral/posts/" target="_blank" aria-label="LinkedIn" class="footer-social-btn linkedin-btn">
+                        <a href="https://www.linkedin.com/company/esseral/posts/" target="_blank" aria-label="LinkedIn" class="footer-social-btn linkedin-btn" matRipple>
                             <img src="assets/images/buttons/icons8-linkedin-color/icons8-linkedin-240.png" alt="LinkedIn" />
                         </a>
                         <span class="footer-social-label footer-linkedin-label">linkedin/esseral</span>
@@ -62,13 +53,13 @@
                 <div class="footer-contact">
                     <p class="footer-follow">Pour nous contacter :</p>
                     <div class="footer-contact-row">
-                        <a href="tel:+15148231042" aria-label="Téléphone" class="footer-contact-btn phone-btn">
+                        <a href="tel:+15148231042" aria-label="Téléphone" class="footer-contact-btn phone-btn" matRipple>
                             <img src="assets/images/buttons/icons8-phone-ios-17-filled-white/icons8-phone-100.png" alt="Téléphone" />
                         </a>
                         <span class="footer-contact-label">(514) 823-1042</span>
                     </div>
                     <div class="footer-contact-row">
-                        <a href="mailto:info@esseral.ca" aria-label="Email" class="footer-contact-btn email-btn">
+                        <a href="mailto:info@esseral.ca" aria-label="Email" class="footer-contact-btn email-btn" matRipple>
                             <img src="assets/images/buttons/icons8-email-ios-17-filled-white/icons8-email-100.png" alt="Email" />                            
                         </a>
                         <span class="footer-contact-label">contact&#64;esseral.ca</span>
@@ -77,23 +68,21 @@
                 <!-- Boutons mobile -->
                 <div class="footer-mobile-row">
                     <div class="footer-mobile-group">
-                        <a href="https://www.instagram.com/esseral.ca" target="_blank" aria-label="Instagram" class="footer-social-btn instagram-btn">
+                        <a href="https://www.instagram.com/esseral.ca" target="_blank" aria-label="Instagram" class="footer-social-btn instagram-btn" matRipple>
                             <img src="assets/images/buttons/icons8-instagram-windows-11-color/icons8-instagram-240.png" alt="Instagram" />
                         </a>
-                        <a href="https://www.linkedin.com/company/esseral/posts/" target="_blank" aria-label="LinkedIn" class="footer-social-btn linkedin-btn">
+                        <a href="https://www.linkedin.com/company/esseral/posts/" target="_blank" aria-label="LinkedIn" class="footer-social-btn linkedin-btn" matRipple>
                             <img src="assets/images/buttons/icons8-linkedin-color/icons8-linkedin-240.png" alt="LinkedIn" />
                         </a>
                     </div>
                     <div class="footer-mobile-group">
-                        <a href="tel:+15148231042" aria-label="Téléphone" class="footer-contact-btn phone-btn">
+                        <a href="tel:+15148231042" aria-label="Téléphone" class="footer-contact-btn phone-btn" matRipple>
                             <img src="assets/images/buttons/icons8-phone-ios-17-filled-white/icons8-phone-100.png" alt="Téléphone" />                            
                         </a>                        
-                        <a href="mailto:info@esseral.ca" aria-label="Email" class="footer-contact-btn email-btn">
+                        <a href="mailto:contact@esseral.ca" aria-label="Email" class="footer-contact-btn email-btn" matRipple>
                             <img src="assets/images/buttons/icons8-email-ios-17-filled-white/icons8-email-100.png" alt="Email" />                            
                         </a>
                     </div>
                 </div>
             </footer>
         </div>
-    </body>
-</html>

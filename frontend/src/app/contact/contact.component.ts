@@ -2,10 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MaterialModule } from '../material.module';
 import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
+import { RouterModule } from '@angular/router';
 
 
 @Component({
   selector: 'app-contact',
+  imports: [MaterialModule, RouterModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.css'
 })

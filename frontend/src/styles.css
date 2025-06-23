@@ -1,10 +1,6 @@
 @use '@angular/material' as mat;
 
-
-@media (max-width: 600px) {
-}
-
-@media (min-width: 600px) {
+@media (min-width: 900px) {
 }
 
 body, html {
@@ -74,3 +70,76 @@ p, span, a, li {
   font-style: normal;
 }
 
+.cta-btn {
+  display: inline-block;
+  margin-top: 1.5em;
+  padding: 0.9em 2.2em;
+  font-size: 1.15rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(90deg, #B818C9 0%, #CC6637 100%);
+  border: none;
+  border-radius: 32px;
+  box-shadow: 0 2px 16px #b818c93a;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: background 0.18s, transform 0.18s, box-shadow 0.18s;
+}
+
+.cta-btn:hover,
+.cta-btn:focus {
+  background: linear-gradient(90deg, #CC6637 0%, #B818C9 100%);
+  transform: scale(1.06) translateY(-2px);
+  box-shadow: 0 6px 24px #b818c955;
+  color: #fff;
+}
+
+.intro-hr, .about-hr {
+  width: 60%;
+  margin: 1.2em auto;
+  border: none;
+  height: 4px;
+  background: linear-gradient(90deg, #5149C9 0%, #B818C9 40%, #cc3634 70%, #CC6637 100%);
+  border-radius: 2px;
+  opacity: 0.7;
+}
+.section-title, .intro-title {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #B818C9;
+  letter-spacing: 1px;
+}.section-title {  
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #B818C9;  
+  letter-spacing: 1px;
+}
+
+section-general {
+  min-width: 70vw;
+}
+
+.hero-content img {
+    font-size: 4rem;
+    animation: pulse 10s ease-in-out infinite;
+  }
+  
+  @keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  }

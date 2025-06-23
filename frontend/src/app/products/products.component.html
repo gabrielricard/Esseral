@@ -1,100 +1,137 @@
-<img src="assets/images/Assets_Esseral2.png" alt="color splash1"  class="splash-img">
-<img src="assets/images/Assets_Esseral2.png" alt="color splash2"  class="splash-img2"> 
-<section class="services-section">
+<section class="services-section section-general">
   <div class="service-block">
-    <h3 class="section-title">Nos services</h3>
+    <h3 class="section-title hero-content">Nos services</h3>
     <p class="service-prix">Les prix sont sur mesure, parlez-nous de votre projet !</p>
     <mat-accordion class="services-accordion" multi>
       <hr class="intro-hr">
-      <mat-expansion-panel>
-        <mat-expansion-panel-header>
-          <mat-panel-title>
-            Analyse et développement de stratégie
-          </mat-panel-title>
-        </mat-expansion-panel-header>
-        <div class="service-desc">
-          Toute présence efficace sur les réseaux sociaux commence par une réflexion stratégique. À qui souhaitez-vous vraiment
-          vous adresser ? Qui sont vos concurrents ? Quelle est l’essence même de votre marque - et vos mission, vision et 
-          valeurs sont-elles clairement perceptibles ? Ensemble, posons les bonnes questions et élaborons une stratégie alignée, 
-          authentique et percutante. Parlons stratégie !
-        </div>
-      </mat-expansion-panel>
-      <mat-expansion-panel>
-        <mat-expansion-panel-header>
-          <mat-panel-title>
-            Planification du calendrier de publication
-          </mat-panel-title>
-        </mat-expansion-panel-header>
-        <div class="service-desc">
-          Ne laissez rien au hasard. Fréquence de publication, rédaction, ajout de liens, hashtags, identifications… chaque 
-          élément est pensé avec précision pour garantir une présence en ligne cohérente et stratégique. Un calendrier de 
-          publication aligné sur votre identité professionnelle renforce votre image de marque, accroît votre notoriété, 
-          consolide votre crédibilité - et bien plus encore !
-        </div>
-      </mat-expansion-panel>
-      <mat-expansion-panel>
-        <mat-expansion-panel-header>
-          <mat-panel-title>
-            Gestion de la communauté
-          </mat-panel-title>
-        </mat-expansion-panel-header>
-        <div class="service-desc">
-          Au-delà du nombre d’abonnés, c’est l’engagement qui révèle le véritable potentiel de conversion. Comment montrer à 
-          votre audience que vous êtes à l’écoute, bienveillant.e et authentique ? From strangers to friends - ensemble, créons 
-          une communauté organique, engagée et fidèle à vos valeurs.
-        </div>
-      </mat-expansion-panel>
-      <mat-expansion-panel>
-        <mat-expansion-panel-header>
-          <mat-panel-title>
-            Création de contenu
-          </mat-panel-title>
-        </mat-expansion-panel-header>
-        <div class="service-desc">
-          <strong>Infolettre :</strong> Bien dosée, l’infolettre devient un outil puissant : elle rassemble une communauté de personnes qui reçoivent 
-          vos contenus en primeur, deviennent de véritables ambassadeur·rice·s et sont les premiers à s’engager lors de 
-          vos lancements, webinaires, formations ou sondages. Chez Esseral, on vous encourage à penser autrement et à 
-          créer vos propres règles, tout en sachant que l’infolettre reste un art précis, qui demande finesse et stratégie.<br><br>
-          <strong>Photos et Reels :</strong> Coulisses, processus en action, témoignages, capsules… Plusieurs formats s’offrent à vous pour mettre 
-          en lumière votre univers, transmettre votre essence et créer une connexion authentique avec votre audience. 
-          Ensemble, donnons vie à un contenu visuel qui vous ressemble — naturel, vibrant et stratégique.
-        </div>
-      </mat-expansion-panel>
-      <mat-expansion-panel>
-        <mat-expansion-panel-header>
-          <mat-panel-title>
-            Graphisme
-          </mat-panel-title>
-        </mat-expansion-panel-header>
-        <div class="service-desc">
-          Logo, identité de marque, brandbook, gabarits pour les réseaux sociaux, cartes d’affaires, articles promotionnels à l’image de votre marque 
-          (t-shirts, bannières, tasses, etc.) : quel que soit votre projet de graphisme, nous vous offrons un prix compétitif.
 
-          La première étape d’un lancement réussi ? Une identité de marque claire. Elle donne une idée de qui vous êtes, avant même qu’on ait lu un seul mot.<br><br>
+      <p class="categorie-service categorie-service-left">Identité de marque</p>
+
+
+      <div class="service-row">
+        <div class="service-panels">
+            <mat-expansion-panel class="expension-pannel expension-pannel-left" [expanded]="true">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+              Graphisme
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="service-desc">
+              Logo, identité de marque, brandbook, gabarits pour les réseaux sociaux, cartes d’affaires, articles promotionnels à l’image de votre marque 
+              (t-shirts, bannières, tasses, etc.) : quel que soit votre projet de graphisme, nous vous offrons un prix compétitif.
+
+              La première étape d’un lancement réussi ? Une identité de marque claire. Elle donne une idée de qui vous êtes, avant même qu’on ait lu un seul mot.<br><br>
+            </div>
+            </mat-expansion-panel>
+        </div>        
+        <img src="assets/images/about/graphisme.jpg" alt="Identité de marque" class="service-img service-img-right">
+      </div>
+
+      <p class="categorie-service categorie-service-right">Stratégie</p>
+      <div class="service-row">
+        <img src="assets/images/about/strategie.avif" alt="Stratégie" class="service-img service-img-left">
+        <div class="service-panels">
+          <mat-expansion-panel class="expension-pannel expension-pannel-right" [expanded]="true">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Analyse et développement
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="service-desc">
+              Toute présence efficace sur les réseaux sociaux commence par une réflexion stratégique. À qui souhaitez-vous vraiment
+              vous adresser ? Qui sont vos concurrents ? Quelle est l’essence même de votre marque - et vos mission, vision et 
+              valeurs sont-elles clairement perceptibles ? Ensemble, posons les bonnes questions et élaborons une stratégie alignée, 
+              authentique et percutante. Parlons stratégie !
+            </div>
+          </mat-expansion-panel>
+
+          <mat-expansion-panel class="expension-pannel expension-pannel-right">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Service mensuel
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="service-desc">
+              <strong>Planification du calendrier de publication</strong><br>
+              Ne laissez rien au hasard. Fréquence de publication, rédaction, ajout de liens, hashtags, identifications… chaque 
+              élément est pensé avec précision pour garantir une présence en ligne cohérente et stratégique. Un calendrier de 
+              publication aligné sur votre identité professionnelle renforce votre image de marque, accroît votre notoriété, 
+              consolide votre crédibilité - et bien plus encore !
+              <br><br>
+              <strong>Gestion de la communauté</strong><br>
+              Au-delà du nombre d’abonnés, c’est l’engagement qui révèle le véritable potentiel de conversion. Comment montrer à 
+              votre audience que vous êtes à l’écoute, bienveillant.e et authentique ? From strangers to friends - ensemble, créons 
+              une communauté organique, engagée et fidèle à vos valeurs.
+              <br><br>          
+              <strong>Infolettre</strong><br> 
+              Bien dosée, l’infolettre devient un outil puissant : elle rassemble une communauté de personnes qui reçoivent 
+              vos contenus en primeur, deviennent de véritables ambassadeur·rice·s et sont les premiers à s’engager lors de 
+              vos lancements, webinaires, formations ou sondages. Chez Esseral, on vous encourage à penser autrement et à 
+              créer vos propres règles, tout en sachant que l’infolettre reste un art précis, qui demande finesse et stratégie.<br><br>
+            </div>        
+          </mat-expansion-panel>
         </div>
-      </mat-expansion-panel>
-      <mat-expansion-panel>
-        <mat-expansion-panel-header>
-          <mat-panel-title>
-            Campagnes d’influence avec nano et micro-influenceurs
-          </mat-panel-title>
-        </mat-expansion-panel-header>
-        <div class="service-desc">
-          <strong>Qui sont les micro-influenceurs ?</strong><br>
-          Les micro-influenceurs sont des créateurs de contenu dont la communauté varie généralement entre 5 000 et 100 000 abonnés. Leur force ? Une audience engagée, souvent rassemblée autour d’intérêts spécifiques et d’un lien de confiance établi.
-          <br><br>
-          <strong>Et les nano-influenceurs ?</strong><br>
-          Les nano-influenceurs comptent moins de 5 000 abonnés. Leur communauté est plus restreinte, mais souvent très engagée et fidèle. Perçus comme des consommateurs « ordinaires », ils partagent des recommandations authentiques et ont un impact réel dans leur cercle d’influence.
-          <br><br>
-          <strong>En quoi consiste une campagne d’influence ?</strong><br>
-          Une campagne d’influence vise à collaborer avec des créateurs soigneusement sélectionnés pour promouvoir vos produits, services ou événements. Nous nous chargeons de tout : proposition et encadrement de la collaboration, négociation des termes, création du contenu et rayonnement global.
-          <br><br>
+      </div>
+
+      <p class="categorie-service categorie-service-left">À la carte </p>
+      <div class="service-row">
+        <div class="service-panels">
+          <mat-expansion-panel class="expension-pannel expension-pannel-left" [expanded]="true">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Photos et Reels
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="service-desc">          
+              Coulisses, processus en action, témoignages, capsules… Plusieurs formats s’offrent à vous pour mettre 
+              en lumière votre univers, transmettre votre essence et créer une connexion authentique avec votre audience. 
+              Ensemble, donnons vie à un contenu visuel qui vous ressemble — naturel, vibrant et stratégique.
+            </div>
+          </mat-expansion-panel>
+
+          <mat-expansion-panel class="expension-pannel expension-pannel-left">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Articles blogs
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="service-desc">          
+              Un article de blog bien rédigé est un outil puissant pour attirer l’attention, susciter l’intérêt et 
+              convertir vos lecteurs en clients. En plus d’améliorer votre référencement naturel, il vous positionne 
+              comme un expert dans votre domaine. Ensemble, créons des articles qui captivent, informent et engagent 
+              votre audience.
+            </div>
+          </mat-expansion-panel>
+          
+          <mat-expansion-panel class="expension-pannel expension-pannel-left">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Campagnes d’influence avec nano et micro-influenceurs
+              </mat-panel-title>
+            </mat-expansion-panel-header>        
+            <div class="service-desc">
+              <strong>Qui sont les micro-influenceurs ?</strong><br>
+              Les micro-influenceurs sont des créateurs de contenu dont la communauté varie généralement entre 5 000 et 100 000 abonnés. Leur force ? Une audience engagée, souvent rassemblée autour d’intérêts spécifiques et d’un lien de confiance établi.
+              <br><br>
+              <strong>Et les nano-influenceurs ?</strong><br>
+              Les nano-influenceurs comptent moins de 5 000 abonnés. Leur communauté est plus restreinte, mais souvent très engagée et fidèle. Perçus comme des consommateurs « ordinaires », ils partagent des recommandations authentiques et ont un impact réel dans leur cercle d’influence.
+              <br><br>
+              <strong>En quoi consiste une campagne d’influence ?</strong><br>
+              Une campagne d’influence vise à collaborer avec des créateurs soigneusement sélectionnés pour promouvoir vos produits, services ou événements. Nous nous chargeons de tout : proposition et encadrement de la collaboration, négociation des termes, création du contenu et rayonnement global.
+              <br><br>
+            </div>
+          </mat-expansion-panel>
         </div>
-      </mat-expansion-panel>
+        <div class="service-img-col">
+          <img src="assets/images/about/alacarte.jpg" alt="À la carte" class="service-img service-img-right" style="border-radius: 18px 18px 0 0;">
+          <img src="assets/images/about/articles.jpg" alt="Articles" class="service-img service-img-right" style="border-radius: 0 0 18px 18px;">
+        </div>
+      </div>
       <hr class="intro-hr services-hr">
+
     </mat-accordion>  
     <div class="services-contact-cta">
-      <a href="/contact" class="cta-btn services-cta-btn">
+      <a routerLink="/contact" class="cta-btn services-cta-btn">
         Des questions ? Écrivez-nous!
       </a>
     </div>

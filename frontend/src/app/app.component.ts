@@ -2,12 +2,23 @@ import { AfterViewInit, Component, HostListener } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { MaterialModule } from './material.module';
 import { CommonModule } from '@angular/common';
+import { trigger, transition, style, animate } from '@angular/animations';
+import { RouterModule } from '@angular/router';
+
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, MaterialModule, CommonModule],
+  imports: [RouterOutlet, RouterModule, MaterialModule, CommonModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
+  animations: [
+    trigger('routeFadeAnimation', [
+      transition('* <=> *', [
+        style({ opacity: 0 }),
+        animate('1000ms ease', style({ opacity: 1 })),
+      ]),
+    ]),
+  ]
 })
 export class AppComponent implements AfterViewInit{
   title = 'frontend';
@@ -45,5 +56,9 @@ export class AppComponent implements AfterViewInit{
         });
       });
     }
+  }
+
+  removeFocus(event: Event) {
+    (event.target as HTMLElement).blur();
   }
 }

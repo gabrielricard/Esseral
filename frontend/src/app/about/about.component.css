@@ -1,36 +1,8 @@
-.splash-img,
-.splash-img2 {
-  position: fixed;
-  z-index: 0;
-  pointer-events: none;
-  user-select: none;
-  opacity: 0.7;
-  width: 38vw;
-  min-width: 1360px;
-  height: auto;
-  transition: opacity 0.3s;
-}
-
-.splash-img {
-  left: 0;
-  bottom: 0;
-  top: auto;
-  right: auto;
-  transform: translate(-12%, 12%) scaleX(-1) rotate(-8deg);
-}
-
-.splash-img2 {
-  right: 0;
-  top: 0;
-  left: auto;
-  bottom: auto;
-  transform: translate(12%, -12%) rotate(8deg);
-}
-
 .about-section {
   position: relative;
   z-index: 1;
-  max-width: 900px;
+  width: 95vw;
+  max-width: 880px;
   margin: 0 auto;
   padding: 4em 1em 3em 1em;
   display: flex;
@@ -39,12 +11,9 @@
 }
 
 .about-mission-block {
-  background: rgba(255,236,229,0.92);
-  border-radius: 24px;
-  box-shadow: 0 4px 32px #b818c91a;
   padding: 2.5em 2em 2.5em 2em;
   width: 100%;
-  max-width: 700px;
+  max-width: 70vw;
   text-align: center;
   margin-bottom: 3em;
   margin-top: 2.5em;
@@ -57,16 +26,6 @@
   color: #B818C9;
   margin-bottom: 0.5em;
   letter-spacing: 1px;
-}
-
-.about-hr {
-  width: 60%;
-  margin: 1.2em auto;
-  border: none;
-  height: 4px;
-  background: linear-gradient(90deg, #5149C9 0%, #B818C9 40%, #cc3634 70%, #CC6637 100%);
-  border-radius: 2px;
-  opacity: 0.7;
 }
 
 .about-mission {  
@@ -82,8 +41,6 @@
   font-size: 1.5rem;
   font-weight: 700;
   color: #B818C9;
-  margin-bottom: 2em;
-  margin-top: 1em;
   text-align: center;
 }
 
@@ -106,13 +63,16 @@
 }
 
 .equipe {
-  width: 420px;
-  height: 420px;
+  width: 18vw;
+  height: 18vw;
+  min-width: 300px;
+  min-height: 300px;
   object-fit: cover;
   border-radius: 18px;
   box-shadow: 0 2px 12px #b818c933;
   background: #fff;
   flex-shrink: 0;
+  align-self: center
 }
 
 .about-team-info {
@@ -157,9 +117,12 @@
   flex-direction: column;
   gap: 0.3em;
 }
-.about-member-extra strong {
-  color: #B818C9;
-  font-weight: 700;
+
+.about-member-desc,
+.about-member-extra {
+  font-size: 1.02rem;
+  color: #5149C9;
+  font-family: 'Overused Grotesk', sans-serif;
 }
 
 @media (max-width: 900px) {
@@ -187,5 +150,10 @@
   .equipe {
     width: 410px;
     height: 410px;
+  }
+  .about-member-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
