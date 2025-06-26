@@ -1,3 +1,5 @@
+import { OnDestroy } from '@angular/core';
+import { OnInit } from '@angular/core';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,6 +8,11 @@ import { Component } from '@angular/core';
   templateUrl: './links.component.html',
   styleUrl: './links.component.css'
 })
-export class LinksComponent {
-
+export class LinksComponent implements OnInit, OnDestroy {
+  ngOnInit() {
+    document.body.classList.add('links-page');
+  }
+  ngOnDestroy() {
+    document.body.classList.remove('links-page');
+  }
 }
