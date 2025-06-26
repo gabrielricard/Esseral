@@ -1,19 +1,6 @@
-/* NETTOYAGE DE LA BD */
-DROP TABLE "User";
-
-/* CREATION DES TABLES */
-
-CREATE TABLE "User" (
-                        UserID INT NOT NULL UNIQUE,
-                        UserName TEXT NOT NULL,
-                        Password TEXT NOT NULL,
-                        Name TEXT NOT NULL,
-                        LastName TEXT NOT NULL,
-                        PRIMARY KEY(UserID)
+CREATE TABLE users (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    email TEXT UNIQUE NOT NULL,
+    password_hash TEXT NOT NULL
 );
-
-
-/* INSERTION */
-
-INSERT INTO User(UserID, UserName, Password, Name, LastName)
-VALUES(1,"Gabric", "1234", "Gabriel", "Ricard" );

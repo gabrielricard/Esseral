@@ -1,0 +1,17 @@
+<section class="contact-section section-general">
+  <div class="contact-block">
+    <h1 class="section-title">Contactez-nous</h1>
+    <hr class="contact-hr">
+    <p class="contact-desc">
+      Une question, un projet ou envie de collaborer ? Notre équipe est à votre écoute pour vous accompagner et répondre à vos besoins.
+    </p>
+    <div class="contact-infos">
+    </div>
+    <form class="contact-form" (submit)="onSubmit($event)">
+      <input type="text" name="user_name" placeholder="Votre nom" required>
+      <input type="email" name="user_email" placeholder="Votre courriel" required>
+      <textarea rows="4" name="message" placeholder="Votre message" required></textarea>
+      <button type="submit" class="cta-btn" matRipple>Envoyer</button>
+    </form>
+  </div>
+</section>

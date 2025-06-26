@@ -1,18 +1,274 @@
-/* Make header fill the viewport */
+/* Style pour le header */
 
-/* Extra tweaks for very small screens */
-@media (max-width: 600px) {
-  .logo {
-    max-width: 82vw;
-    max-height: 20vh;
+.custom-header {
+  position: relative;
+  width: 100vw;
+  min-height: 65vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: 0 4px 32px #b818c91a;
+  padding-top: 2.5em;
+  padding-bottom: 1.5em;
+  z-index: 0;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.logo {
+  width: 260px;
+  max-width: 70vw;
+  height: auto;
+  filter: drop-shadow(0 4px 24px #b818c955);
+  transition: transform 0.18s, filter 0.18s;
+  cursor: pointer;
+}
+.logo:hover,
+.logo:focus {
+  transform: scale(1.07) rotate(-3deg);
+  filter: drop-shadow(0 8px 32px #b818c999);
+}
+
+.header-location {
+  position: absolute;
+  right: 2vw;
+  bottom: 1vw;
+  background: rgba(30,30,30,0.75);
+  color: #FFECE5;
+  font-family: 'Overused Grotesk', sans-serif;
+  font-size: 0.8em;
+  padding: 0.5em 1.2em;
+  border-radius: 18px 0 18px 0;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 8px #b818c933;
+  pointer-events: none;
+}
+
+/* Responsive styles */
+@media (max-width: 700px) {
+  .custom-header {
+    min-height: 55vh;
+    padding-top: 1.2em;
+    padding-bottom: 0.7em;
   }
-  .sous-logo {
-    font-size: 5vw;
+  .logo {
+    width: 170px;
+    max-width: 72vw;
+  }
+  .header-location {
+    font-size: 0.8em;
+    padding: 0.35em 0.8em;
+    right: 1vw;
+    bottom: 1vw;
   }
 }
 
-@media (min-width: 600px) {
-  .sous-logo {
-    font-size: 2rem;
+header {         
+    background-size: 100%;    
+    background: #544AAF;
+    background: linear-gradient(147deg,rgba(84, 74, 175, 1) 0%, rgba(204, 54, 52, 1) 33%, rgba(204, 102, 55, 1) 66%, rgba(170, 61, 167, 1) 100%);
   }
+  
+  /* Overlay en transparence par-dessus */
+  header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.01); /* change l’opacité pour plus ou moins de fondu */
+    z-index: 1;
+  }
+  
+  /* Glow subtil autour du contenu */
+  header::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.12) 0%, transparent 15%);
+    mix-blend-mode: screen;
+    z-index: 2;
+    pointer-events: none;
+  }
+  
+  #home-content {
+    min-width: 70%;
+  }
+
+  .logo {
+    width: 40rem;
+  }
+
+  .marquee {
+    width: 100vw;    
+    overflow: hidden;
+    background: transparent;
+    white-space: nowrap;
+    box-sizing: border-box;
+    color: #FFECE5;
+    border-top: #FFECE5 solid 3px;
+    border-bottom: #FFECE5 solid 3px;  
+    font-size: 1.5rem;
+    background: #544AAF;
+    background: linear-gradient(323deg,rgba(84, 74, 175, 0.9) 0%, rgba(204, 54, 52, 0.9) 33%, rgba(204, 102, 55, 0.8) 66%, rgba(170, 61, 167, 0.9) 100%);
+    z-index: 10;
+    position: relative;
+  }
+
+  .marquee__inner {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  animation: marquee 48s linear infinite;
+  gap: 4.5rem; /* espace entre chaque élément */
+  z-index: 10;
+}
+
+.marquee-item {
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+  font-size: 1.5rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: #FFECE5;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+.marquee-sep {
+  font-size: 2.2rem;
+  color: #FFECE5;
+  margin: 0 4.8rem;
+  font-weight: bold;
+  user-select: none;
+  z-index: 10;
+}
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .intro-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  width: 100%;
+  padding: 2em 0;
+}
+
+.intro-block {
+  padding: 2.5em 2em 2.5em 2em;  
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.intro-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #B818C9;
+  margin-bottom: 0.5em;
+  letter-spacing: 1px;
+}
+
+.intro-subtitle {
+  font-family: 'Overused Grotesk', sans-serif;
+  font-size: 1.3rem;
+  color: #5149C9;
+  margin: 1em 0 0.5em 0;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.intro-desc {
+  font-family: 'Overused Grotesk', sans-serif;
+  font-size: 1.1rem;
+  color: #cc3634;
+  margin-bottom: 2em;
+  margin-top: 0.5em;
+  font-weight: 400;
+}
+
+.home-resume-section {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2.5em;
+  margin: 3em auto 2em auto;
+  max-width: 900px;
+  flex-wrap: wrap;
+}
+
+.home-resume-block {
+  background: rgba(255,236,229,0.92);
+  border-radius: 12px;
+  box-shadow: 0 2px 16px #0000001a;
+  padding: 2em 1.5em 2.5em 1.5em;
+  min-width: 260px;
+  max-width: 380px;
+  flex: 1 1 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5em;
+  text-align: center;
+}
+
+.resume-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #B818C9;
+  margin-bottom: 0.7em;
+}
+
+.resume-desc {
+  font-family: 'Overused Grotesk', sans-serif;
+  font-size: 1.05rem;
+  color: #5149C9;
+  margin-bottom: 1.5em;
+}
+
+.resume-btn {
+  margin-top: auto;
+  font-size: 1.08rem;
+  padding: 0.7em 1.7em;
+}
+
+@media (max-width: 900px) {
+  .home-resume-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+  }
+  .home-resume-block {
+    max-width: 95vw;
+    min-width: unset;
+  }
+}
+
+/* Pour que le contenu soit au-dessus des splash */
+section, main, .about-content, .about-section {
+  position: relative;
+  z-index: 1;
+}
+
+/* Pour éviter que les splash couvrent le header/footer */
+header, .custom-toolbar, footer, .footer-content {
+  position: relative;
+  z-index: 10;
 }
