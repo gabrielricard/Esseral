@@ -1,6 +1,5 @@
 body, html {
-    height: 100%;
-    font-family: "Inconsolata", sans-serif;
+    height: 100%;    
     background-color: #FFECE5;
   }
 
@@ -93,14 +92,13 @@ body, span {
   font-family: 'Overused Grotesk', sans-serif;
 }
 
-h1, h2, h3, mat-card-header {
+h1, h2, h3, h4, mat-card-header {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
 }
 
 p {
   font-family: 'Overused Grotesk', sans-serif;
-  font-style: italic;
 }
 
  /* Importing Overused Grotesk fonts */
