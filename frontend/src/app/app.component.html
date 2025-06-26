@@ -23,9 +23,10 @@
             </div>
         </div>
 
-        <main [@routeFadeAnimation]="o.isActivated && o.activatedRoute.routeConfig?.path">
+        <div [@routeStaggerFade]="o.isActivated && o.activatedRoute.routeConfig?.path" class="router-container">
             <router-outlet #o="outlet"></router-outlet>
-        </main>
+        </div>
+        
         <div class="background-footer">
             <footer class="footer-content">
                 <div class="footer-social">
@@ -46,7 +47,7 @@
                 <div class="footer-infos">
                     <p>© 2025 Esseral. Tous droits réservés.</p>
                     <p>Conception et développement par 
-                        <a href="https://www.linkedin.com/in/Gabriel Ricard" target="_blank" style="color: white;">Gabriel Ricard</a>
+                        <a href="https://www.linkedin.com/in/gabriel-ricard-17a4a1206" target="_blank" style="color: white;">Gabriel Ricard</a>
                     </p>
                     <p>Politique de confidentialité | Conditions d'utilisation</p>
                 </div>

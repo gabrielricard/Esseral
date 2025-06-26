@@ -1,9 +1,10 @@
-import { AfterViewInit, Component, HostListener } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { AfterViewInit, Component, HostListener, inject } from '@angular/core';
+import { Router, RouterOutlet, NavigationEnd } from '@angular/router';
 import { MaterialModule } from './material.module';
 import { CommonModule } from '@angular/common';
-import { trigger, transition, style, animate } from '@angular/animations';
+import { trigger, transition, style, animate, stagger, query } from '@angular/animations';
 import { RouterModule } from '@angular/router';
+import { filter } from 'rxjs/operators';
 
 
 @Component({
@@ -12,11 +13,15 @@ import { RouterModule } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   animations: [
-    trigger('routeFadeAnimation', [
+    trigger('routeStaggerFade', [
       transition('* <=> *', [
-        style({ opacity: 0 }),
-        animate('1000ms ease', style({ opacity: 1 })),
-      ]),
+        query(':enter', [
+          style({ opacity: 0 }),
+          stagger(100, [
+            animate('700ms ease-in', style({ opacity: 1 }))
+          ])
+        ], { optional: true })
+      ])
     ]),
   ]
 })
@@ -24,6 +29,7 @@ export class AppComponent implements AfterViewInit{
   title = 'frontend';
 
   showFooter = false;
+  private router = inject(Router);
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
@@ -42,6 +48,11 @@ export class AppComponent implements AfterViewInit{
   ngAfterViewInit() {
     const burger = document.querySelector('.toolbar-burger') as HTMLElement;
     const drawer = document.querySelector('.toolbar-drawer') as HTMLElement;
+    this.router.events
+      .pipe(filter((event: any) => event instanceof NavigationEnd))
+      .subscribe(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });      
 
     if (burger && drawer) {
       burger.addEventListener('click', () => {

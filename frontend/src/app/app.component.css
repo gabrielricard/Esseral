@@ -447,3 +447,7 @@ main, .about-content, .about-section {
 header, .custom-toolbar, footer, .footer-content {
   z-index: 10;
 }
+
+.router-container {
+  position: relative;  
+}
