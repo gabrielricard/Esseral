@@ -204,6 +204,7 @@ mat-divider {
   width: 100%;
   margin-top: auto;
   box-shadow: 0 -2px 8px rgba(0,0,0,0.04);
+  z-index: 1000;
 }
 
 .footer-social {
